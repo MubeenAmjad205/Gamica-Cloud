@@ -1,0 +1,108 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    .flex > li:last-child {
+        display: none;
+        position: relative;
+        top: 5px;
+        text-align: right;
+        padding-right: 5px;
+    }
+
+    .mobile-menu li{
+        cursor: pointer;
+    }
+
+    .mobile-menu li:hover{
+        background-color: rgb(164, 18, 164);
+    }
+
+    .mobile-menu{
+        padding: 0;
+        background-color: purple;
+        list-style: none;
+    text-align: left;
+    position: absolute;
+    right: 0;
+    padding-inline: 20px;
+        display: none;
+    }
+
+    /* .flex li:not(:nth-child(2)) { */
+    @media screen and (max-width:600px) {
+
+        .flex > li:not(:first-child) {
+            display: none;
+        }
+
+        .flex > li:last-child {
+            display: block;
+        }
+
+    }
+
+
+
+    .flex {
+        display: flex;
+        list-style: none;
+    }
+
+    .flex li i {
+        vertical-align: middle;
+    }
+
+    .flex li {
+        flex-grow: 1;
+        line-height: 30px;
+    }
+
+    .flex li:first-child {
+        flex-grow: 5;
+    }
+
+    .flex button:focus + ol{
+        display: block;
+    }
+
+    .flex button{
+        background-color: transparent;
+        border: none;
+    }
+
+    header {
+        background-color: purple;
+        color: white;
+    }
+</style>
+
+<header>
+
+
+  
+
+
+    <ol class="flex web-menu">
+        <li>ARSHA</li>
+        <li>Home</li>
+        <li>Contact</li>
+        <li>Dashboard</li>
+        <li>Login</li>
+        <li>Portfolio</li>
+
+        <li>
+            <button>
+                <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+            </button>
+            <ol class="mobile-menu">
+                <li>Home</li>
+                <li>Contact</li>
+                <li>Dashboard</li>
+                <li>Login</li>
+                <li>Portfolio</li>
+            </ol>
+        </li>
+    </ol>
+</header>
+<i class="fa-solid fa-bars"></i>

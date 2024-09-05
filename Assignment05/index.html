@@ -1,0 +1,149 @@
+<style>
+@keyframes blink{
+    10%{
+        background-color: blue;
+        box-shadow: 0px 0px 25px 11px blue;
+    }
+    20%{
+        background-color: red;
+        box-shadow: 0px 0px 25px 11px red;
+    }
+    30%{
+        background-color: blue;
+        box-shadow: 0px 0px 25px 11px blue;
+    }
+    40%{
+        background-color: red;
+        box-shadow: 0px 0px 25px 11px red;
+    }
+    50%{
+        background-color: blue;
+        box-shadow: 0px 0px 25px 11px blue;
+    }
+    60%{
+        background-color: red;
+        box-shadow: 0px 0px 25px 11px red;
+    }
+    70%{
+        background-color: blue;
+        box-shadow: 0px 0px 25px 11px blue;
+    }
+    80%{
+        background-color: red;
+        box-shadow: 0px 0px 25px 11px red;
+    }
+    90%{
+        background-color: blue;
+        box-shadow: 0px 0px 25px 11px blue;
+    }
+    100%{
+        background-color: red;
+        box-shadow: 0px 0px 25px 11px red;
+    }
+    
+}
+@keyframes rotate {
+
+0%{
+    transform: rotate(0deg);
+}
+100%{
+    transform: rotate(360deg);
+}
+
+}
+
+    @keyframes moveAnimation {
+    
+        0%{
+            left:0;
+        }
+    
+        100%{
+            left: calc(100vw - 250px);
+        }
+        
+    }
+    button{
+        position: absolute;
+        top: 390px;
+        left: 630px;
+        background-color: brown;
+        color: white;
+        font-weight: 700;
+        padding: 15px;
+    }
+    
+    #road{
+        width: 100%;
+    }
+    
+    #mycar img:first-child{
+        width: 100%;
+    }
+    
+    #mycar{
+        
+        top:150px;
+        position: absolute;
+        width: 250px;
+        
+    }
+    
+    .wheel:nth-child(2){
+        top: 59px;
+        left: 42px;
+    }
+    
+    .wheel:nth-child(3){
+        top: 59px;
+        left: 184px;
+    }
+    
+    .wheel{
+        position: absolute;
+        width: 30px;
+        height:  30px;
+    }
+    
+    button:focus + #mycar{
+        animation: moveAnimation 6s ease-in-out 0s;        
+        animation-fill-mode: forwards;
+    }
+
+    button:focus + #mycar .wheel{
+        animation: rotate 3s linear 0s ;
+        animation-iteration-count: 2;
+    }
+    
+    .light{
+        background-color: red;
+        box-shadow: 0px 0px 25px 11px red;
+        width: 25px;
+        height: 15px;
+        border-radius: 35%;
+        position:absolute;
+        bottom: 82px;
+        left: 90px;
+       
+    }
+ 
+button:focus + #mycar .light{
+        animation:blink 6s linear 0s !important    ;
+    }
+   
+
+    </style>
+    
+    <img src="myroad.jpg" alt="" id="road">
+    
+    <button>Start</button>
+
+    <div id="mycar">
+
+       
+        <img src="my-car.png" alt="">
+        <img class="wheel" src="wheel.png" alt="">
+        <img class="wheel" src="wheel.png" alt="">
+        <div class="light" id="some"></div>
+</div>

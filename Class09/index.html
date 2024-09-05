@@ -1,0 +1,39 @@
+<style>
+
+    @keyframes meriAnimation {
+    
+        0%{top:0;left: 0%;}
+        12% {width:100px; height:100px; background-color : purple; border-radius: 0%;}
+
+        25%{top:0;left: calc(100vw - 100px); background-color:orange; border-radius: 100%}
+    
+    
+        37%{width:100px; height:100px; background-color : purple;  border-radius: 0%;}
+       
+    
+        50%{top:calc(100vh - 100px);left: calc(100vw - 100px); background-color: orange; border-radius: 100%}
+        62%{width:100px; height:100px; background-color : purple;  border-radius: 0%;}
+        
+        75%{top:calc(100vh - 100px);left: 0;  background-color: orange; border-radius: 100%}
+        87%{width:100px; height:100px; background-color : purple;  border-radius: 0%;}
+        
+        100%{top:0;left:0;  background-color: orange; border-radius: 100%}
+        
+    }
+    
+    #circle{
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+        border-radius: 100px;
+        position: absolute;
+        animation:meriAnimation 10s linear 0s;
+        animation-iteration-count: infinite;
+    }
+    
+    
+    </style>
+
+    <div id="circle">
+
+</div>

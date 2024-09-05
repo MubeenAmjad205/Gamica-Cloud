@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Blog preview card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: hsl(46.71deg 89.3% 63.33%);
+    }
+    #maincard {
+      position: absolute;
+      width: 300px;
+      height:fit-content;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 6px 6px 2px black;
+      border : 1px solid black;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1.5%;
+
+    }
+    #maincard img#article{
+      width: 100%;
+      height: auto;
+      /* object-fit: cover; */
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    #maincard span{
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      background-color:hsl(46.71deg 89.3% 63.33%) ;
+      padding: 2%;
+      border-radius: 8%;
+    }
+    #maincard span + div{
+      margin-top: 10px;
+      font-size: 16px;
+      line-height: 1.5;
+      color: hsl(0deg 0% 18.43%);
+    }
+    #maincard h2{
+      font-size: 22px;  
+    }
+    #maincard #disc{
+      color:  hsl(0deg 0% 56.08%);
+    }
+    #avatar{
+      width : 12%;
+      /* height: 10px; */
+    }
+    #name-p{
+      font-weight: 600;
+      font-size: 15px;
+      /* color: hsl(0deg 0% 18.43%);   */
+      display: inline-block;
+      font: bold 11%;
+    }
+   
+     .avatar-pic{
+      vertical-align: middle;
+     }
+  
+
+
+ 
+  </style>
+<body>
+<div id="maincard">
+  <img id="article" src="assets/images/illustration-article.svg" alt="">
+  <span>Learning</span>
+  <div>Published 21 Dec 23</div>
+  <h2>HTML & CSS fondations</h2>
+  <p id="disc">These languages are the backbone of every website, defining structure, content, and presentation. </p>
+  <div id="avatar-div">
+  <img id="avatar" class="avatar-pic" src="assets/images/image-avatar.webp" alt="Avatar">
+  <p id="name-p" class="avatar-pic">Greg Hooper</p>
+  </div>
+  
+</div>
+</body>
+</html>

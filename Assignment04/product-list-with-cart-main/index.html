@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Product list with cart</title>
+
+  <style>
+    @font-face {
+      font-family: redhat;
+      src: url(assets/fonts/RedHatText-VariableFont_wght.ttf);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: redhat;
+      background-color: #fcf8f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #container-main {
+      /* border: 1px solid black; */
+      margin-top: 100px;
+      height: 100vh;
+      width: 95%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #left-div {
+      margin-top: 370px; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* border: 1px solid black; */
+      height: 100%;
+      flex-grow: 24;
+    }
+
+    #right-div {
+      /* border: 1px solid black; */
+      height: 100%;
+      width: fit-content;
+      flex-grow: 1;
+    }
+
+    #cart-div {
+      width: 100%;
+      height: fit-content;
+      background-color: white;
+      padding-top: 20px;
+    }
+
+    #cart-container {
+      padding-inline: 20px;
+      background-color: white;
+      border-radius: 10px;
+      height: fit-content;
+    }
+
+    #cart-div h1 {
+      color: hsl(15.84deg 83.18% 41.96%);
+      height: fit-content;
+    }
+
+    .cart-item {
+      border-bottom: 1px solid hsl(0, 12%, 90%);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-block: 15px;
+      /* border-bottom: 1px solid hsl(0deg 0% 94.9%); */
+    }
+
+    .cart-item-left p {
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .cart-item-right {
+      width: fit-content;
+    }
+
+    .cart-quantity-span {
+      color: hsl(15.84deg 83.18% 41.96%);
+      font-weight: 500;
+      margin-right: 10px;
+    }
+
+    .cart-price-span {
+      color: hsl(13.33deg 4.19% 57.84%);
+      margin-inline: 2px;
+    }
+
+    .cart-totalprice-span {
+      color: hsl(13.33deg 4.19% 57.84%);
+      font-weight: 500;
+      margin-inline: 2px;
+    }
+
+    #p-totalprice {
+      margin-block: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #carbon-neutra-p-div {
+      background-color: hsl(25.71deg 53.85% 97.45%);
+      padding: 10px;
+      width: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    #icon-carbon-neutral {
+      margin-inline: 10px;
+    }
+
+    #confirm-order-btn {
+      margin-block: 30px;
+      width: 300px;
+      height: 50px;
+      background-color: hsl(14.52deg 86.92% 41.96%);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    #confirm-order-btn-carbon-neutral-div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    #confirm-order-btn:hover {
+      background-color: hsl(14.52deg 86.92% 41.96%);
+      transform: scale(1.02);
+    }
+
+    #left-div {
+      height: fit-content;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #container-products {
+      height: 100%;
+      width: 90%;
+      /* border: 1px sol  id black; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    #desserts-div{
+      width: 100%;
+            display: flex;      
+      justify-content: flex-start ;
+      align-items: flex-start;
+    }
+  
+    #desserts{
+      font-weight: bold;
+      margin-bottom: 20px;  
+    }
+    #product-cards-container{
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .product-card{
+      width: 250px;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .img-btn-container {  
+  position: relative;  
+  width: 100%;  
+  height: 100%;  
+}  
+
+.product-img {  
+  display: block;  
+  width: 100%;  
+  /* height: 200px;   */
+  border-radius: 10px;  
+  cursor: pointer;  
+  z-index: 1;  
+}  
+
+.add-to-cart-btn {  
+  margin-bottom: 10px;  
+  width: 150px;  
+  height: 40px;  
+  border: 1px solid hsl(0deg 7.1% 64.12%) ;  
+  border-radius: 50px;  
+  cursor: pointer;  
+  position: absolute; 
+  left: 50%;  
+  transform: translate(-50%, -50%);  
+  z-index: 3;  
+  background-color: #fff;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.add-to-cart-btn img{
+width: 18px;
+}
+.product-data-div{
+  margin-top: 20px;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.product-type-p{
+  color: hsl(18.95deg 7.69% 48.43%);
+  font: 500;
+  font-size: 13 px;
+}
+.price-p{
+  color: hsl(14.52deg 86.92% 41.96%);
+  font-weight:500;
+  /* font-size: 15px; */
+}
+#second-img{
+  border: 2px solid hsl(14.52deg 86.92% 41.96%);
+}
+#second-btn{
+  display: flex;
+  justify-content: space-around;
+  background-color: hsl(14.52deg 86.92% 41.96%);
+  color: white;
+}
+#second-btn-increment{
+  width: 10px;
+  border: 1px solid white;
+  border-radius: 100%;
+  padding: 3px;
+}
+#second-btn-decrement{
+  width: 10px;
+  border: 1px solid white;
+  border-radius: 100%;
+  padding: 7px 4px;
+}
+  </style>
+</head>
+
+<body>
+  <div id="container-main">
+    <!-- It is the left section of the page which shows our product list -->
+    <div id="left-div">
+      <div id="container-products">
+        <div id="desserts-div">
+          <h1 id="desserts">Desserts</h1>
+        </div>
+        <div id="product-cards-container">
+          <!-- Product card 1 -->
+          <div class="product-card">
+            <div class="img-btn-container">
+              <img class="product-img" src="assets/images/image-waffle-desktop.jpg" alt="product-1">
+              <button class="add-to-cart-btn"><img src="assets/images/icon-add-to-cart.svg" alt="icon-add-to-cart"> Add to Cart</button>
+            </div>
+            <div class="product-data-div">
+              <p class="product-type-p">Waffle</p>
+              <h5 product-name>Waffle with Berries</h5>
+              <p class="price-p">$6.50</p>
+            </div>
+          </div>
+          <!-- Product card-2 -->
+          <div class="product-card">
+            <div class="img-btn-container">
+              <img class="product-img" id="second-img" src="assets/images/image-creme-brulee-desktop.jpg" alt="product-1">
+              <button class="add-to-cart-btn" id="second-btn" ><img id="second-btn-decrement" src="assets/images/icon-decrement-quantity.svg" alt="icon-add-to-cart"> 4 <img id="second-btn-increment" src="assets/images/icon-increment-quantity.svg" alt=""></button>
+            </div>
+            <div class="product-data-div">
+              <p class="product-type-p">Crème Brûlée</p>
+              <h5 product-name>Vanilla Bean Crème Brûlée</h5>
+              <p class="price-p">$7.00</p>
+            </div>
+          </div>
+          <!-- Product card-3 -->
+          <div class="product-card">
+            <div class="img-btn-container">
+              <img class="product-img" src="assets/images/image-macaron-desktop.jpg" alt="product-1">
+              <button class="add-to-cart-btn"><img src="assets/images/icon-add-to-cart.svg" alt="icon-add-to-cart"> Add to Cart</button>
+            </div>
+            <div class="product-data-div">
+              <p class="product-type-p">Macaron</p>
+              <h5 product-name>Macaron Mix of Five</h5>
+              <p class="price-p">$8.00</p>
+            </div>
+          </div>
+          <!-- Product card-4 -->
+          <div class="product-card">
+            <div class="img-btn-container">
+              <img class="product-img" src="assets/images/image-waffle-desktop.jpg" alt="product-1">
+              <button class="add-to-cart-btn"><img src="assets/images/icon-add-to-cart.svg" alt="icon-add-to-cart"> Add to Cart</button>
+            </div>
+            <div class="product-data-div">
+              <p class="product-type-p">Waffle</p>
+              <h5 product-name>Waffle with Berries</h5>
+              <p class="price-p">$6.50</p>
+            </div>
+          </div>
+          <!-- Product card-5 -->
+          <div class="product-card">
+            <div class="img-btn-container">
+              <img class="product-img" src="assets/images/image-waffle-desktop.jpg" alt="product-1">
+              <button class="add-to-cart-btn"><img src="assets/images/icon-add-to-cart.svg" alt="icon-add-to-cart"> Add to Cart</button>
+            </div>
+            <div class="product-data-div">
+              <p class="product-type-p">Waffle</p>
+              <h5 product-name>Waffle with Berries</h5>
+              <p class="price-p">$6.50</p>
+            </div>
+          </div>
+          <!-- Product card-6 -->
+          <div class="product-card">
+            <div class="img-btn-container">
+              <img class="product-img" src="assets/images/image-waffle-desktop.jpg" alt="product-1">
+              <button class="add-to-cart-btn"><img src="assets/images/icon-add-to-cart.svg" alt="icon-add-to-cart"> Add to Cart</button>
+            </div>
+            <div class="product-data-div">
+              <p class="product-type-p">Waffle</p>
+              <h5 product-name>Waffle with Berries</h5>
+              <p class="price-p">$6.50</p>
+            </div>
+          </div>
+          
+          <!-- Product card-7 -->
+          <div class="product-card">
+            <div class="img-btn-container">
+              <img class="product-img" src="assets/images/image-waffle-desktop.jpg" alt="product-1">
+              <button class="add-to-cart-btn"><img src="assets/images/icon-add-to-cart.svg" alt="icon-add-to-cart"> Add to Cart</button>
+            </div>
+            <div class="product-data-div">
+              <p class="product-type-p">Waffle</p>
+              <h5 product-name>Waffle with Berries</h5>
+              <p class="price-p">$6.50</p>
+            </div>
+          </div>
+          <!-- Product card-8 -->
+          <div class="product-card">
+            <div class="img-btn-container">
+              <img class="product-img" src="assets/images/image-waffle-desktop.jpg" alt="product-1">
+              <button class="add-to-cart-btn"><img src="assets/images/icon-add-to-cart.svg" alt="icon-add-to-cart"> Add to Cart</button>
+            </div>
+            <div class="product-data-div">
+              <p class="product-type-p">Waffle</p>
+              <h5 product-name>Waffle with Berries</h5>
+              <p class="price-p">$6.50</p>
+            </div>
+          </div>
+          <!-- Product card-9 -->
+          <div class="product-card">
+            <div class="img-btn-container">
+              <img class="product-img" src="assets/images/image-waffle-desktop.jpg" alt="product-1">
+              <button class="add-to-cart-btn"><img src="assets/images/icon-add-to-cart.svg" alt="icon-add-to-cart"> Add to Cart</button>
+            </div>
+            <div class="product-data-div">
+              <p class="product-type-p">Waffle</p>
+              <h5 product-name>Waffle with Berries</h5>
+              <p class="price-p">$6.50</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- It is the right sectin of the page which shows our cart status -->
+    <div id="right-div">
+
+      <div id="cart-container">
+        <div id="cart-div">
+          <h1>Your Cart (7)</h1>
+          <div class="cart-item">
+            <div class="cart-item-left">
+              <p>Classic Tiramisu</p>
+              <span class="cart-quantity-span">1x</span>
+              <span class="cart-price-span">@5.50</span>
+              <span class="cart-totalprice-span">$5.50</span>
+            </div>
+            <div class="cart-item-right">
+              <img class="icon-remove-item" src="assets/images/Screenshot 2024-08-26 230920.png" alt="icon-remove-item">
+            </div>
+          </div>
+          <div class="cart-item">
+            <div class="cart-item-left">
+              <p>Vanilla Bean Crème Brûlée</p>
+              <span class="cart-quantity-span">4x</span>
+              <span class="cart-price-span">@7.00</span>
+              <span class="cart-totalprice-span">$28.00</span>
+            </div>
+            <div class="cart-item-right">
+              <img class="icon-remove-item" src="assets/images/Screenshot 2024-08-26 230920.png" alt="icon-remove-item">
+            </div>
+          </div>
+          <div class="cart-item">
+            <div class="cart-item-left">
+              <p>Vanilla Panna Cotta</p>
+              <span class="cart-quantity-span">2x</span>
+              <span class="cart-price-span">@6.50</span>
+              <span class="cart-totalprice-span">$13.00</span>
+            </div>
+            <div class="cart-item-right">
+              <img class="icon-remove-item" src="assets/images/Screenshot 2024-08-26 230920.png" alt="icon-remove-item">
+            </div>
+          </div>
+          <div id="p-totalprice">
+            <p>Order Total</p>
+            <h2>$46.50</h2>
+          </div>
+          <div id="confirm-order-btn-carbon-neutral-div">
+            <div id="carbon-neutra-p-div">
+              <img id="icon-carbon-neutral" src="assets/images/icon-carbon-neutral.svg" alt="icon-carbon-neutral">
+              <p>This is a <b>carbon-neutral</b> delivery</p>
+            </div>
+            <button id="confirm-order-btn">Confirm Order</button>
+          </div>
+          <!-- The cart section ends here -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
+
+<!-- 
+Desserts
+
+Waffle with Berries
+Waffle
+6.50
+Add to Cart
+
+Vanilla Bean Crème Brûlée
+Crème Brûlée
+7.00
+Add to Cart
+
+Macaron Mix of Five
+Macaron
+8.00
+Add to Cart
+
+Classic Tiramisu
+Tiramisu
+5.50
+Add to Cart
+
+Pistachio Baklava
+Baklava
+4.00
+Add to Cart
+
+Lemon Meringue Pie
+Pie
+5.00
+Add to Cart
+
+Red Velvet Cake
+Cake
+4.50
+Add to Cart
+
+Salted Caramel Brownie
+Brownie
+4.50
+Add to Cart
+
+Vanilla Panna Cotta
+Panna Cotta
+6.50
+Add to Cart
+
+Your Cart (<!-- Quantity -->
+<!-- Your added items will appear here
+
+<div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+  Coded by <a href="#">Your Name Here</a>.
+</div> -->

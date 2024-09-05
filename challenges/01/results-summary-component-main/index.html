@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Results summary component</title>
+
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @font-face {
+      font-family: myfont;
+      src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+    }
+
+    * {
+      padding: 0%;
+      margin: 0%;
+    }
+
+    body {
+      font-family: myfont;
+      /* background-color: rgb(215, 206, 206); */
+    }
+
+    .container {
+      position: absolute;
+      left: 0%;
+      right: 0%;
+      top: 0%;
+      bottom: 0%;
+      display: flex;
+      width: 40%;
+      height: fit-content;
+      margin: auto;
+      background-color: white;
+      /* border: 1px soli d red; */
+    }
+
+    #left-card {
+      padding-inline: 30px;
+      background-color: hsl(250.16deg 96.92% 61.76%);
+      border-radius: 25px;
+      flex-grow: 1;
+      height: fit-content;
+      /* border: 1px solid black; */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .circle {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: hsl(254.64deg 71.19% 46.27%);
+      color: white;
+      /* font-size: 40px; */
+      /* font-weight: 700; */
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    #left-card p {
+      color: hsl(250.71deg 100% 89.02%);
+      font-weight: 500;
+    }
+
+    #your-result {
+      line-height: 90px;
+      font-size: 1.4rem;
+    }
+
+    #left-card h1 {
+      font-weight: 900;
+      font-size: 4rem;
+    }
+
+    #left-card h2 {
+      color: white;
+      font-size: 1.7rem;
+      font-weight: 500;
+      line-height: 60px;
+    }
+
+    #left-card h2+p {
+      margin-top: 20px;
+      /* line-height: 10px; */
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    #right-card {
+      padding-inline: 30px;
+      background-color: white;
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
+      flex-grow: 1;
+      width: 100%;
+      /* height: 100%; */
+      /* border: 1px solid black; */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    }
+
+    #right-card h3 {
+      line-height: 90px;
+      font-size: 1.4rem;
+      opacity: 75%;
+    }
+
+    .ability {
+      font-weight: 800;
+      background-color:hsl(6deg 100% 98.04%);
+      border-radius: 5px;
+      width: 100%;
+      height: fit-content;
+      padding-inline: 10px;
+      display: flex;
+      flex-direction: row !important;
+      justify-content: space-between;
+      align-items: center;
+
+    }
+
+    
+    .ability-icon {
+      vertical-align: middle;
+    }
+
+    .hundred {
+      opacity: 70%;
+    }
+
+    .ability-container {
+      height: 60%;
+      width: 100%;
+      line-height: 50px;
+      display: flex;
+       flex-direction: column;
+       text-align: center;
+       justify-content: space-evenly;
+      align-items: center;
+    }
+    #right-card h3{
+      text-align: start;
+      width: 100%;
+    }
+    #right-card button{
+      font-weight: 700;
+      background-color: #4CAF50;
+      color: white;
+      width: 100%;
+      height: 45px;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-top: 20px;
+      background-color: hsl(223.9deg 29.93% 26.86%);
+      
+    }
+    #ability-text1{
+      opacity: 70%;
+      color: brown;
+    }
+    #ability-text2{
+      color: hsl(39.41deg 95.48% 65.29%);
+    }
+    #ability-text3{
+      color:hsl(164.63deg 59.02% 40.2%);
+    }
+    #ability-text4{
+      color: hsl(233.89deg 50.94% 41.57%) ;
+    }
+    </style>
+</head>
+
+<body>
+  <div class="container">
+    <div id="left-card">
+      <p id="your-result">Your Result</p>
+      <div class="circle">
+        <h1>76</h1>
+        <p id="out-of">of 100</p>
+      </div>
+      <h2>Great</h2>
+      <p>You scored higher than 65% of the poeple who have taken these tests.</p>
+    </div>
+    <di id="right-card">
+      <h3>Summary</h3>
+      <div class="ability-container">
+
+        <!-- 1 -->
+        <div class="ability">
+          <p id="ability-text1"><img class="ability-icon" src="assets/images/icon-reaction.svg" alt="icon"> Reaction</p>
+          <p><span>80</span><span class="hundred"> / 100</span></p>
+        </div>
+        <!-- 2 -->
+        <div class="ability">
+          <p id="ability-text2"><img class="ability-icon" src="assets/images/icon-memory.svg" alt="icon"> Memory</p>
+          <p><span>92</span><span class="hundred"> / 100</span></p>
+        </div>
+        <!-- 3 -->
+        <div class="ability">
+          <p id="ability-text3"><img class="ability-icon" src="assets/images/icon-verbal.svg" alt="icon"> Verbal</p>
+          <p><span>61</span><span class="hundred"> / 100</span></p>
+        </div>
+        <!-- 4 -->
+        <div class="ability">
+          <p id="ability-text4"><img class="ability-icon" src="assets/images/icon-visual.svg" alt="icon"> Visual</p>
+          <p ><span>72</span><span class="hundred"> / 100</span></p>
+        </div>
+        <!-- end -->
+      </div>
+      <button>Continue</button>
+
+  </div>
+  </div>
+</body>
+
+</html>

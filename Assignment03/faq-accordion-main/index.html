@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | FAQ accordion</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body{
+     
+      font-family: Arial, sans-serif;
+
+    }
+    .main-div{
+      width: fit-content;
+      height: 95vh;
+      /* border: 2px solid black; */
+      box-shadow: 0px 0px 20px black;
+      background-color: hsl(278.82deg 100% 96.67%);
+      margin: auto;
+      position: absolute;
+      left: 0%;
+      right: 0%;
+      top: 0%;
+      bottom: 0%;
+    }
+    .main-div img#pattern-img{
+      width: 100%;
+      height: 40%;
+      position: relative;
+    }
+    .card-div{
+      position: absolute;
+      left: 0%;
+      right: 0%;
+      top: 0%;
+      bottom: 0%;
+      margin: auto;
+      width: 45%;
+      height: fit-content;
+      background-color: hsl(0deg 0% 100%);
+      border-radius: 3%;
+      box-shadow: 0px 0px 10px #534b4b;
+      padding: 2%;
+    }
+    #star-img-div{
+    text-align:left ;
+    margin-block: 5%;
+    }
+  
+    #star-img-div h1{
+      font-weight: 800;
+      color: hsl(292.94deg 53.13% 12.55%);
+      display: inline-block;
+     font-size: 45px;
+    }
+    .star-img{
+      vertical-align:middle;
+      width : 35px;
+    
+    }
+    .question-p{
+     font-weight: 600;
+     color: hsl(292.94deg 53.13% 12.55%);
+     text-align: left;
+     width: 95%;
+     height:50px ;
+     display: inline-block  ;
+    }
+    .plus-img{
+           width: 25px;
+           height: 25px;
+        /* margin-bottom: 2%; */
+        background-image: url(assets/images/icon-plus.svg);
+        background-size: cover;
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: middle;
+    
+    }
+    .plus-img:hover{
+      cursor:pointer;
+      background-image: url(assets/images/icon-minus.svg);    
+
+    }
+
+    .question-p{
+      vertical-align:middle;
+      display: inline-block;
+      
+    }
+    .answer-p{
+      color: hsl(294.55deg 7.38% 70.78%);
+      font-size: 95%;
+      margin-bottom: 10%;
+      display: none;
+
+    }
+    .plus-img:hover + #hover-p{
+      display: block !important;
+
+    }
+  
+    .minus-img:hover{
+      cursor:pointer;
+  }
+  .star-h1{
+    vertical-align: middle;
+    margin-inline: 5%;
+  }
+  .faq-wrap{
+     
+        position: relative;
+    }
+    #hover-span{
+      margin: auto;
+    position: absolute;
+    top: 0;
+    left: 390px;
+    right: 0;
+    bottom: 30px;
+
+    }
+    #span1{
+      margin: auto;
+    position: absolute;
+    top: 50px;
+    left: 390px;
+    right: 0;
+    bottom: 30px;
+    }
+    #span2{
+      margin: auto;
+    position: absolute;
+    top: 150px;
+    left: 390px;
+    right: 0;
+    bottom: 30px;
+    }
+    #span3{
+      margin: auto;
+    position: absolute;
+    top: 250px;
+    left: 390px;
+    right: 0;
+    bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-div">
+    <img id="pattern-img" src="assets/images/background-pattern-desktop.svg" alt="desktop.svg">
+    <div class="card-div">
+      <div id="star-img-div">
+        <img class="star-img" class="star-h1" src="assets/images/icon-star.svg" alt=""> 
+        <h1 class="star-h1">FAQs</h1></div>
+        <div class="faq-wrap">
+          <p class="question-p" > What is Frontend Mentor, and how it will help me?</p>
+          <span class="plus-img" id="hover-span"></span>
+          <p  class="answer-p" id="hover-p">Frontend Mentore offers realistic to help developers to improve their frontend coding skills with projects in HTML, CSS and Javascript. It's suitabl for all levels and ideas for portfolios building</p>  
+        </div>
+      <p class="question-p" >Is Frontend Mentor free?</p>
+      <span class="plus-img" id="span1"></span>
+      <p class="question-p" >Can I use Frontend Mentor projects in portfilio?</p>
+      <span class="plus-img" id="span2"></span>
+      <p class="question-p" >How can I get help if I'm stuck in a challenge?</p>
+      <span class="plus-img" id="span3"></span>
+    </div>
+  </div>
+</body>
+</html>
+
+    

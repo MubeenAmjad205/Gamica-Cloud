@@ -1,0 +1,63 @@
+ <style>
+    *{
+        margin: 0;
+      
+    }
+li{
+    display: inline-block;
+    padding-inline: 30px;
+    
+}
+nav{
+    background-color: black;
+    color: white;
+    width: 80%;
+    margin: auto;
+    position: relative;
+    
+    
+   
+}
+ol{
+    padding-block: 30px;
+    margin: auto;
+    width: fit-content;
+}
+#leftli{
+    border-left: solid 50px transparent;
+    border-right: solid 50px transparent;
+    border-top: solid 78px black;
+    position: absolute;
+    left: -100px;
+    bottom: 0px;
+}
+#rightli{
+    border-left: solid 50px transparent;
+    border-right: solid 50px transparent;
+    border-top: solid 78px black;
+    position: absolute;
+    right: -100px;
+    bottom: 0px;
+}
+.textli:hover{
+    color:orange;
+  
+
+}
+.textli{
+    cursor: pointer;
+}
+ </style>
+ <header>
+    <nav>
+        <ol>
+            <li id="leftli"></li>
+            <li class="textli">Best Seller</li>
+            <li class="textli">Gift Ideas</li>
+            <li class="textli">New Release</li>
+            <li class="textli">Today's Deals</li>
+            <li class="textli">Customer Service</li>
+            <li id="rightli"></li>
+        </ol>
+    </nav>
+ </header>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class06</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+   }
+   .p-ol{
+        background-color: #33569c;
+        line-height: 250%;
+        position: relative;
+        text-align: center;
+
+    }
+    .p-li:hover{
+        color: rgb(255, 255, 255);
+        background-color: rgb(132, 160, 221);
+        transition: background-color 1s ease;
+    }
+    .p-li{
+        display: inline-block;
+        width: 20%;
+        position: relative;
+        cursor: pointer;
+    }
+    .punjab-c-ol{
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        margin: 0%;
+    }
+    .c-li:hover{
+        
+        color: white;
+        background-color: #1a477d;
+        transition:background-color 1s ease; 
+    }   
+    .c-li{
+        list-style: none;
+    background-color:  #33569c;
+    color:black;
+    line-height: 250%;
+    height: fit-content;
+    display: none;
+    cursor: pointer;
+    }
+    #punjab:hover .c-li {
+        display: block;
+    }
+    #faisalabad{
+        position: relative;
+    }
+    .a-ol{
+        position: absolute;
+    }
+    .a-li{
+        list-style: none;
+        color: white;
+        background-color: #33569c;
+        transition: background-color 1s ease;
+        line-height: 250%;
+        display: none;
+        position: relative;
+        cursor: pointer;
+        width: 150%;
+        left: 273px;
+        bottom: 40px;
+    }
+    #faisalabad:hover .a-li {
+        display: block;
+    }
+    .a-li:hover{
+        background-color: #1a477d;
+    }
+    #down-punjab{
+        position: absolute;
+        left: 165px;
+        top: 2px;
+        width: 35px;
+        cursor: pointer;  
+    }
+    #down-faisalabad{
+        position: absolute;
+        left: 170px;
+        top: 2px;
+        width: 35px;
+        transform: rotate(-90deg);
+        cursor: pointer;
+    }
+</style>
+<body>
+    <ol  class="p-ol">
+        <li class="p-li" id="punjab">Punjab <img id="down-punjab" src="down.svg " alt="">
+            <ol class="punjab-c-ol">
+                <li class="c-li" id="faisalabad">Faisalabad <img id="down-faisalabad" src="down.svg" alt="">
+                    <ol class="a-ol">
+                        <li class="a-li">Jinnah Colony</li>
+                        <li class="a-li">Kohenoor City</li>
+                        <li class="a-li">Mansurabad</li>
+                        <li class="a-li">Gutwala</li>
+                    </ol>
+                </li>
+                <li class="c-li">Multan</li>
+                <li class="c-li">Gojra</li>
+                <li class="c-li">Lahore</li>
+            </ol>
+        </li>
+        <li class="p-li">Sindh</li>
+        <li class="p-li">KPK</li>
+        <li class="p-li">Balochistan</li>
+    </ol>
+</body>
+</html>

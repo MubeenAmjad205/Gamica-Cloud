@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolutionM4</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<style>
+    * {
+
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: black;
+        height: 100vh;
+        width: 100%;
+    }
+
+    #header {
+        margin: auto;
+        width: 98%;
+        height: 70px;
+        background-color: #333;
+        color: #ffffff;
+        /* padding-block: 20px; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    i {
+        margin-right: 10px;
+    }
+
+    li:nth-child(1) {
+        width: 30%;
+    }
+
+    li:nth-child(1) a {
+        font-weight: 800;
+        font-size: 2.5rem;
+    }
+
+    li:last-child {
+        width: 16%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    li:last-child button {
+        font-weight: 500;
+        font-size: 1.1rem;
+        background-color: #333;
+        color: #ffffff;
+        padding: 10px 20px;
+        cursor: pointer;
+        border: 1px solid red
+    }
+
+    #icon-btn-div {
+        width: fit-content;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #body-container{
+        width: 98%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #section{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid red   ;
+    }
+    #leftdiv{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        border: 1px solid red;
+    }
+</style>
+
+<body>  
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="#">SolutionM4</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Featurs</a></li>
+                <li><a href="#">Category</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">About</a></li>
+
+                <li>
+                    <div id="icon-btn-div">
+                        <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
+                        <i class="fa-brands fa-skype" style="color: #ffffff;"></i>
+                        <i class="fa-brands fa-facebook" style="color: #ffffff;"></i>
+                    </div>
+                    <button><i class="fa-solid fa-bell" style="color: #ffffff;"></i> BUY NOW</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Page body starts from here -->
+     <div id="body-container">
+        <section id="section">
+
+            <div id="leftdiv">
+                <div id="h1-p-div">
+                    <h1>WEB SOLUTION COMPANY</h1> 
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum quibusdam perferendis alias molestias quaerat laboriosam fugit, saepe hic accusantium?</p> 
+                </div>
+                <button><i class="fa-solid fa-arrow-up-right-from-square" style="color: #ffffff;"></i> GET STARTED</button>
+                
+            </div>
+            <div id="rightdiv"></div>
+        </section>
+     </div>
+
+</body>
+
+</html>
