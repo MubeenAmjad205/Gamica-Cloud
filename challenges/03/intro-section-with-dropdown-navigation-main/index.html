@@ -1,186 +1,16 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="Data.css">
   
   <title>Intro section with dropdown navigation</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-      *{
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        font-family: Arial, sans-serif;
-      }
-      header{
-        display: flex;
-        align-items: center;
-        width: 95vw;
-        height: fit-content;
-        margin: auto;
-        /* background-color: #f1f1f1; */
-        display: flex;
-         justify-content: space-between;
-        padding: 20px;
-      }
-      .left-div{
-         display: flex;
-        align-items: center;
-      }
-      .left-div > ol{
-        list-style-type: none;
-        display: flex;
-        align-items: center;
-        gap: 30px;
-      }
-      .left-div > ol li img{
-        cursor: pointer;
-        vertical-align: middle;
-      }
-      .left-div > ol li:first-child{
-        position: relative;
-      }
-      #inner-ol-features{
-        /* display: none; */
-        box-shadow: 0px 0px 15px -6px;
-        background-color: #f1f1f1;
-        border-radius: 10px;
-        padding: 10px;
-        width: 100px;
-        text-align: start;
-        list-style: none;
-        position: absolute !important;
-        top: 60px;
-        left: 100px;
-      }
-      #inner-ol-features li img{
-        vertical-align: middle;
-        cursor: pointer;
-        margin-right: 10px;
-      }
-      #inner-ol-features li{
-        font-size: 0.9rem;
-      }
-      #inner-ol-features li:first-child{
-        display: flex;
-        justify-content: flex-start;
-      margin-block: 10px;
-      }
-      #inner-ol-features li:nth-child(2){
-        display: flex;
-        justify-content: flex-start;
-        margin-block: 10px;
-      }
-      #inner-ol-features li:nth-child(3){
-        display: flex;
-        justify-content: flex-start;
-        margin-block: 10px;
-      
-      }
-      #inner-ol-features li:nth-child(4){
-        display: flex;
-        justify-content: flex-start;
-        margin-block: 10px;
-      
-      }
-      
-      .left-div > ol li a,
-      .left-div > ol li a button{
-         text-decoration: none;
-         font-weight: 550;
-        color: hsl(0deg 0% 49.8%);
-      }
-      .left-div ol li a button{
-        border: none;
-        background-color: white;
-      } 
-      .right-div{
-         display: flex;
-        align-items: center; 
-        gap: 20px;
-      }
-      .right-div #login-btn{
-        border: none;
-        background-color: white;
-        color: hsl(0deg 0% 49.8%);
-        font-weight: 600;
-        padding: 10px 30px;
-        cursor: pointer;
-      }
-      .right-div #register-btn{
-        border: 2px solid hsl(0deg 0% 49.8%);
-        border-radius: 12px;
-        color: hsl(0deg 0% 49.8%);
-        font-weight: 600;
-        padding: 10px 30px;
-        cursor: pointer;
-
-      }
-      main{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 50px;
-        width: 80vw;
-        height: fit-content;
-        margin: auto;
-        /* border: 2px solid hsl(0deg 0% 49.8%); */
-
-      }
-      .left-box{
-        width: 50%;
-      }
-      .left-box h1{
-        margin-block:40px ;
-        font-size: 5rem!important;
-        font-weight: 700;
-      }
-      .left-box h1 + p{
-        width: 70%;
-        line-height: 25px;
-        margin-block:40px ;
-        color: hsl(0deg 0% 49.8%);
-        font-weight: 450;
-      }
-      .left-box button{
-        color: white;
-        border-radius: 12px;
-        font-size: 1rem;
-        font-weight: 700;
-        padding: 15px 35px;
-        background-color: black ;
-      }
-    
-    .left-box .images{
-      display: flex;
-        justify-content: space-around;
-        align-items: center;
-        gap: 20px;
-      margin-top: 200px;
-      height: fit-content;
-      width: 100%;
-    
-    }
-      .right-box{
-        /* flex-grow: 1; */
-        width: 50%;
-      }
-      .right-box img{
-        width: 100%;
-        height: 70%;
-        
-      }
-      /* Active states */
-      #feature-btn:foscus{
-
-      }
-      /*End of Active states */
-      </style>
+  
 </head>
 <body>
 <header>
@@ -188,19 +18,27 @@
     <ol>
       <li><img src="images/logo.svg" alt="logo"></li>
       <li>
+        <a href="#"> <button id="features-btn">Features 
         <ol id="inner-ol-features">
           <li><img src="images/icon-todo.svg" alt=""> Todo List</li>
           <li><img src="images/icon-calendar.svg" alt=""> Calendar</li>
           <li><img src="images/icon-reminders.svg" alt=""> Reminder</li>
           <li><img src="images/icon-planning.svg" alt=""> Planning</li>
         </ol>
-        <a href="#"> <button id="feature-btn">Features <img src="images/icon-arrow-down.svg" alt=""></button></a></li>
-      <li><a href="#"> <button id="company-btn">Company <img src="images/icon-arrow-down.svg" alt=""></button></a></li>
+          <img src="images/icon-arrow-down.svg" alt=""></button></a></li>
+      <li><a href="#"> <button id="company-btn">Company
+        <ol id="inner-ol-company">
+          <li>History</li>
+          <li>Our Team</li>
+          <li>Blog</li>
+        </ol>
+        <img src="images/icon-arrow-down.svg" alt=""></button></a></li>
       <li><a href="#">Careers</a></li>
       <li><a href="#">About</a></li>
     </ol>
   </div>
   <div class="right-div">
+    <button id="menu-btn"><img src="images/icon-menu.svg" alt="menu"></button>
     <button id="login-btn">Login</button>
     <button id="register-btn">Register</button>
   </div>
@@ -210,7 +48,7 @@
   <div class="left-box">
     <h1>Make <br> remote work</h1>
     <p>Get your team in sync. no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
-    <button>Learn more</button>
+    <button id="learn-more-btn">Learn more</button>
     <div class="images">
       <img src="images/client-databiz.svg" alt="">
       <img src="images/client-audiophile.svg" alt="">
@@ -223,14 +61,10 @@
   <img src="images/image-hero-desktop.png" alt="">
   </div>
 </main>
+<div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  Coded by <a href="#">Mubeen Amjad</a>.
 
 </body>
 </html>
-<!-- <div class="attribution">
-  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-  Coded by <a href="#">Your Name Here</a>. -->
-  <!-- <ul class="dropdown">
-          <li><a href="#">Dropdown Item 1</a></li>
-          <li><a href="#">Dropdown Item 2</a></li>
-          <li><a href="#">Dropdown Item 3</a></li>
-        </ul> -->
+  
