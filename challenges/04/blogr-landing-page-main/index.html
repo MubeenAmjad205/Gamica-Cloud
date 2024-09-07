@@ -6,94 +6,119 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <title>Frontend Mentor | [Blogr]</title>
+  <title>Blogr</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    @font-face {
+      font-family: font;
+      src: url(Roboto-Regular.ttf);
+    }
+    *{
+      margin: 0;
+      padding: 0;
+    }
+   body{
+    font-family:font ;
+   }
+   header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+    width: 100vw;
+    margin: auto;
+    background-color:hsl(355.57deg 98.88% 65.1%);
+    border: 1px solid pink;
+} 
+nav{
+  width: 80%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ol{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+  list-style: none;
+  height: fit-content;
+
+}
+ol li{
+  color:hsl(4.62deg 97.01% 86.86%);
+
+}
+header button{
+  padding: 15px 25px;
+  border-radius: 30px;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+
+}
+.login-btn{
+  color:hsl(4.62deg 97.01% 86.86%);
+  background: none;
+}
+.signup-btn{
+  color: hsl(356.74deg 64.82% 60.98%);
+  background-color: white;
+}
+.header-content{
+  height: fit-content;
+}
+.header-content h1{
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: white  ;
+}
+.header-content p{
+  color:hsl(4.62deg 97.01% 86.86%);
+  width: 100%;
+  text-align: center;
+}
+.header-content div button:first-child{
+  
+}
+
+
+</style>
 </head>
 <body>
-  Product
+  <header>
+    <nav>
+      <ol>
+        <li><img src="images/logo.svg" alt="logo"></li>
+        <li>Product  <img src="images/icon-arrow-light.svg" alt=""></li>
+        <li>Company  <img src="images/icon-arrow-light.svg" alt=""></li>
+        <li>Connect  <img src="images/icon-arrow-light.svg" alt=""></li>
+      </ol>
+      <div class="header-btns">
+        <Button class="login-btn">Login</Button>
+        <Button class="signup-btn">Sign UP</Button>  
+      </div>
+    </nav>
+    <div class="header-content">
+      <h1>A modern Publishing Platform</h1>
+      <p>Grow your Audience and build your online brand</p>
+      <div>
+        <button>Start for Free</button>
+        <button>Learn More</button>
+      </div>
+    </div>
+  </header>
 
-  Overview
-  Pricing
-  Marketplace
-  Features
-  Integrations
-
-  Company
-
-  About
-  Team
-  Blog
-  Careers
-
-  Connect
-
-  Contact
-  Newsletter
-  LinkedIn
-  
-  Login
-  Sign Up
-
-  A modern publishing platform
-  Grow your audience and build your online brand
-
-  Start for Free
-  Learn More
-
-  Designed for the future
-
-  Introducing an extensible editor
-  Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
-  The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
-  videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
-  change the looks of a blog.
-
-  Robust content management
-  Flexible content management enables users to easily move through posts. Increase the usability of your blog 
-  by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
-
-  State of the Art Infrastructure
-  With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
-  This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
-
-  Free, open, simple
-  Blogr is a free and open source application backed by a large community of helpful developers. It supports 
-  features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
-  and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
-
-  Powerful tooling
-  Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
-  capable of producing even the most complicated sites.
-
-  Product
-
-  Overview
-  Pricing
-  Marketplace
-  Features
-  Integrations
-
-  Company
-
-  About
-  Team
-  Blog
-  Careers
-
-  Connect
-  
-  Contact
-  Newsletter
-  LinkedIn
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>
+
+
+<!-- <div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  Coded by <a href="#">Your Name Here</a>.
+</div>       .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); } -->
