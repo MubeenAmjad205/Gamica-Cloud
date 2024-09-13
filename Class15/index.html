@@ -1,0 +1,120 @@
+<script>
+
+    // let appleCounter = 0;
+    // let matchingWord = 'apple';
+    // let newWord = prompt("Enter a word to Replace:");
+    // // let wordCount = parseInt(prompt("How many words do you want to Replace:"));
+
+
+    // let str = "i like apple, do you like apple, I guess he does not like apple";
+
+    // for (let i = 0; i < str.length; i++) {
+
+    //     let currentWord = str.slice(i, i + matchingWord.length);
+        
+    //     for (let j = 0; j < 1; j++) {
+        
+    //     if (currentWord == matchingWord) {
+    //             str = str.slice(0, i) + newWord + str.slice(i + matchingWord.length,)
+    //         }
+    //     }
+    // }
+
+    // console.log(str);
+
+
+    // alert(str);
+    // let Updated_str= str.replace(/\d+/g,"####");
+    // alert(Updated_str);
+    
+    // console.log(Updated_str)
+    
+        // let str = "pakistan was born in 1947, it become atomic power in 1998, and it got bankrupt in 2024";
+
+        //  let newStr = str.slice(/\d+/g,);
+        //  console.log(newStr);
+
+
+
+
+
+        
+
+
+// let str = "pakistan was born in 1947. its mostly industry was nationalized in 72 it become atomic power in 98, and it got bankrupt in 2024";
+
+
+// for(let i=0;i<str.length;i++){
+
+
+//     // debugger
+
+//     let ch = str[i];
+    
+//     let numberH = !isNaN(ch) && ch != " ";
+
+//     if(numberH){
+
+//         str =  str.slice(0,i) + "#" + str.slice(i+1);
+//         console.log('milgya')
+//            }
+
+// }
+
+// console.log(str);
+
+
+
+
+//     let currentWord = str.slice(i, i+matching.length);
+
+//     if(currentWord == matching){
+//         indexMilgya = i;
+//         break;
+//     }
+
+// }
+
+// console.log(indexMilgya)
+
+// repeat function ki desi logic
+// let word = 'apple';
+// let finalWord = '';
+// let repeat = 4;
+// for(let i=1; i<=repeat;i++){
+//     finalWord += word;
+// }
+// console.log(finalWord);
+
+
+
+let str = "pakistan was born in 1947. its mostly industry was nationalized in 72 it become atomic power in 98 and it got bankrupt in 2024";
+     
+     
+     for(let i = 0;i<str.length;i++){
+         
+         let year = ''
+        let counter = 0;
+        // let shortWalaAgya = false;
+
+        let twoPairNumber = str.slice(i,i+2);
+
+        let pehlaNumber = !isNaN(twoPairNumber[0]) && twoPairNumber[0] != " ";
+        let doosraNumber = !isNaN(twoPairNumber[1]) && twoPairNumber[1] != " ";
+        
+
+        if(str[i-1] == ' ' && str[i+2] == ' '){
+        
+            if(pehlaNumber && doosraNumber){
+
+                str =  str.slice(0,i) + "##" + str.slice(i+2);
+            }
+
+            // let numberH = !isNaN(ch) && ch != " ";
+
+        }
+    }
+    console.log(str);
+
+
+</script>

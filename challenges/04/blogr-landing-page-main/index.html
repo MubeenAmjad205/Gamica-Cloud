@@ -311,6 +311,9 @@ footer div ul li:not(:first-child){
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); } 
 
+#hamburger{
+display: none;
+}
 
 /* Active States */
 #connect-btn:focus{
@@ -359,7 +362,43 @@ footer ul li:hover{
 /* Media Quries */
 
   @media screen and (max-width: 748px) {
+    header{
+      height: 600px;
+      background-position-x: -260px;
+      background-position-y: -260px;
+      background-image: url(images/bg-pattern-intro-mobile.svg);
+    }
     
+    header nav ol li:not(:first-child),
+    header nav div{
+      display: none;
+    }
+    #hamburger{
+      display: block;
+    }
+    header nav{
+      width: 95%;
+display: flex !important;
+justify-content: space-between;
+}
+header nav ol{
+  display: flex;
+  justify-content: flex-start;
+}
+/* .header-content{
+  width: 90;
+} */
+.header-content h1{
+  width: 85%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.header-content p{
+  width: 80%;
+  font-size: large;
+  margin-bottom: 30px;
+  text-align: center;
+}
 
 
   }
@@ -385,6 +424,7 @@ footer ul li:hover{
           </ul>
           <img src="images/icon-arrow-light.svg" alt=""></li>
       </ol>
+      <img id="hamburger" src="images/icon-hamburger.svg" alt="">
       <div class="header-btns">
         <Button class="login-btn">Login</Button>
         <Button class="signup-btn">Sign UP</Button>  

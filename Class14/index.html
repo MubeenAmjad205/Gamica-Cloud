@@ -1,0 +1,81 @@
+<script>
+
+    // let amount = 4000;
+
+    // let type = prompt("Kya transaction karni?");
+    // let tAmount = +prompt("enter transaction amount");
+
+    // if (type == "w") {
+
+    //     if (isNaN(tAmount) == false) {
+
+    //         if (amount > tAmount && tAmount > 300) {
+    //             amount = amount - tAmount
+    //         }else if(amount < tAmount) {
+    //                 prompt("")
+                
+    //         }else{
+                
+    //             alert("balance nahi h  ya amount 300 say km hai")
+    //         }
+
+
+    //     } else {
+    //         alert("sahi se data den");
+    //     }
+
+    // } else if (type == "d") {
+    //     amount = amount + tAmount
+    // } else {
+    //     alert("option not available")
+    // }
+
+    // console.log(amount)
+
+
+    // let str            = "pizza is the ultimate comfort food; whether it's a cheesy pepperoni pizza, a veggie-loaded pizza, or a classic margherita pizza, there's a pizza for every craving. Nothing beats the joy of biting into a perfectly baked pizza with a crispy crust and gooey cheese!";
+
+    // console.log(str);
+
+    //  let newstr = str.replaceAll("pizza","Naan");
+
+    //  console.log(newstr);
+
+
+
+
+
+    // 
+
+let str = prompt("Enter some character to covert into code.");
+let code=[] ;
+let convertedStr = []
+let bool="";
+let character;
+console.log("ASCHII Code for", str,"is:" )
+for (let i = 0; i <str.length; i++) {
+    code.push(str[i].charCodeAt()) ;
+}
+console.log( code);
+
+bool=prompt("Do you want to convert your ASCHII code in to strig? (yes/no)")
+
+if(bool=="yes"){
+
+    for (let i = 0; i <code.length; i++) {
+        convertedStr.push(String.fromCharCode(code[i])); 
+        
+    }
+    console.log("Here are your converted characters:",convertedStr.join(""))
+}else if(bool=="no"){
+    console.log("No conversion done. Have a good day!");
+}else{
+    console.log("Invalid input. Please reload the page and this time enter 'yes' or 'no'. ");
+}
+
+
+
+
+
+
+</script>
