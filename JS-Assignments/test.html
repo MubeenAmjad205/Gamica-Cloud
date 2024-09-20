@@ -1,0 +1,28 @@
+<script>
+
+function getPrimeNumbers(koiNumber) {
+    let count = 0;
+    let num = koiNumber + 1;
+
+
+    for (; count < 2; num++) {
+        let PrimeHA = true;
+
+        for (let i = 2; i < num; i++) {
+            if (num % i === 0) {
+                PrimeHA = false;
+                break;
+            }
+        }
+
+        if (PrimeHA) {
+            console.log(num);
+            count++;
+        }
+    }
+}
+
+
+getPrimeNumbers(88);
+
+</script>

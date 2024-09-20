@@ -1,0 +1,27 @@
+<script>
+    let word = prompt("Eenter a word to find vowels:");
+    let vowels = "";
+    let count = 0;
+
+    if(word.length == 0){
+        alert("Please enter a word");
+        
+    }else if(word.length > 0){
+
+        for(let  i = 0; i < word.length; i++) {
+            let condition = word[i] == "a" || word[i] == "e" || word[i] == "i" ||word[i] == "o" || word[i] == "u";
+            if (condition) {
+                vowels += word[i];
+                count += 1;
+                
+            }
+        }
+        if(vowels.length > 0){
+            alert("The Vowels in your word : " + vowels);
+            alert("Number of vowels in your word : " + count);
+        }else{
+            alert("There is no Vowels in your word")
+            alert("Number of vowels in your word : " + count);
+        }
+    }
+</script>

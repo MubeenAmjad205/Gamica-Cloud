@@ -1,0 +1,37 @@
+<script>
+    let emailInput = prompt("Please enter your valid Email address: ");
+    // let partInput = prompt("Which part of the Email do you want ?")
+    let c = emailSorter(emailInput);
+    console.log("Your Extension is:",c);
+    function emailSorter(email) {
+        let flag = false;
+        let str = "";
+        for (let ch of email) {
+            // if (part == "extension") {
+                if (ch == ".") {
+                    flag = true;
+                    continue;
+                }
+            // }else if (part == "name"){
+            //     flag = true;
+            //     if(ch == "@"){
+            //     flag = false;    
+            //     }
+            // }else if (part == "domain"){
+            //     if(ch == "@"){
+            //         flag = true;
+            //     }
+            //     if(ch == "."){
+            //         flag = false;
+            //     }
+            // }
+            if (flag) {
+                str += ch;
+            }
+        }
+        return str;
+    }
+
+
+
+</script>

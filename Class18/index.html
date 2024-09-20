@@ -1,0 +1,62 @@
+<script>
+
+
+    let str = "192.168.120.20";
+    let konsa = prompt("Enter your num:");
+    let c = iPSeprater(str,konsa);
+    console.log(c);
+
+
+    function iPSeprater(str, num) {
+        let count = 0;
+        let newStr = "";
+        for (let ch of str) {
+            if (ch == ".") {
+                count++;
+            }
+            if (count == 1 && num == 1) {
+                newStr += ch;
+                if (count == 2) {
+                    return newStr;
+                }
+            } else if (count == 2||count == 3 && num == 2) {
+                // continue;    
+                newStr += ch;
+                if (count == 3) {
+                    return newStr;
+                    break;
+                }
+            } else if (count == 3 && num == 3) {
+                newStr += ch;
+                if (count == 3) {
+                    return newStr;
+                }
+            }
+
+        }
+
+    }
+
+
+
+
+
+    // function midFinder(str){
+    //     let midStr = 0;
+    //     if((str.length-1) % 2==0){
+    //        midStr = (str.length-1)/2;
+    //         // console.log(midStr);
+    //          return str[midStr];
+
+    // }else if((str.length-1) % 2 != 0){
+    //     midStr = (str.length-2)/2;
+    //     str[midStr + (midStr+1 )]
+    //     return str[midStr] + str[midStr +1];
+    // }
+    // }
+    // let input = prompt("Enter a string:");
+    // console.log("Your string: ", input);
+    // let result= midFinder(input);
+    // console.log(result);
+
+</script>

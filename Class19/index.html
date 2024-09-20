@@ -1,0 +1,56 @@
+<script>
+
+let districts = [
+        {
+            name:'faisalabad',
+            tehsils:['fsd city', 'jaranwala', 'jhumra']
+        },
+        {
+            name:'toba',
+            tehsils:['peer mehal', 'gojra', 'rajhana']
+        },
+        {
+            name:'jhelum',
+            tehsils:['pind dadan khan', 'dina', 'jhelum city']
+        }
+    ]
+
+    function lastTehsils (d){
+        let result = [] ;
+        for(let obj of districts){
+            result.push(obj.tehsils[obj.tehsils.length - 1]);
+        }
+
+        return result;
+
+
+    }
+
+    let c =  lastTehsils(districts);
+    console.log(c);
+
+    //  let object =  districts.filter(function(obj){
+    //      let lastTehsils = obj.tehsils[2]
+    //      console.log(lastTehsils);
+    //      if(lastTehsils.length == 3){
+    //          return true;
+
+    //      }
+        
+    //  })
+
+        
+    //  console.log(lastTehsils);
+
+    //  console.log(object)    ;
+
+    // let tehsilName = prompt("enter tehsil name");
+
+    // let  districtMilgyi = districts.find(function(district){
+    //     let tehsilMatch = district.tehsils.includes(tehsilName);
+    //     if(tehsilMatch){
+    //         return true;
+    //     }
+    // })
+
+</script>

@@ -1,0 +1,31 @@
+<script>
+
+    function primeCounter(number, count) {
+        let counter = 0;
+        let rStr = "";
+        let num = number + 1;
+        for (; counter < count; num++) {
+            let isPrime = true;
+
+            for (let i = 2; i < num; i++) {
+                if (num % i === 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+
+            if (isPrime) {
+                counter++;
+                rStr += " " + num;
+            }
+        }
+        return rStr;
+    }
+
+    let a = prompt("Enter a number to star:");
+    let b = prompt("How many prime numbers do you want to find:");
+
+
+    let result = primeCounter(a, b);
+    console.log("Your next " + b + " prime numbers from " + a + " are:", result + ".");
+</script>
